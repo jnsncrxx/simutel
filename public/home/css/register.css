@@ -1,0 +1,80 @@
+.hero {
+  height: 65vh;
+  background: url("/home/images/infinity-pool.webp");
+  background-size: cover;
+  background-position: 0% 45%;
+}
+
+.description h3 {
+  color: var(--gold);
+  margin-bottom: 0.8em;
+  position: relative;
+  font-size: 2em;
+}
+.description h3::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: -30%;
+  background: var(--gold);
+}
+.description p {
+  width: calc(90% - 3vw);
+}
+
+.form {
+  display: grid;
+  place-content: center;
+}
+.form .edit {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form a {
+  text-decoration: none;
+}
+.form a:hover {
+  text-decoration: underline;
+}
+.form h2 {
+  font-weight: bold;
+  color: var(--gold);
+}
+.form .card {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+  border: none;
+  padding: 1em 2em;
+}
+.form .card .row {
+  margin-bottom: 0.8em;
+}
+.form .card label {
+  font-weight: bold;
+}
+.form .card input {
+  padding: 0.3em;
+  border: 1px solid lightgray;
+  font-family: initial !important;
+}
+.form .card input:focus {
+  outline: none;
+  border: 1px solid var(--gold);
+}
+.form .card .pt-3 {
+  font-family: initial !important;
+}
+.form .card .pt-3 p {
+  color: #212529;
+}
+.form .card p {
+  font-size: 0.8em;
+  font-family: initial !important;
+  color: red;
+  margin: 0;
+}/*# sourceMappingURL=register.css.map */

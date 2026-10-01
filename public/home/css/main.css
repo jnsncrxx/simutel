@@ -1,0 +1,695 @@
+@charset "UTF-8";
+:root {
+  --gray: #6c757d;
+  --gold: #D4AF37;
+}
+
+html, body {
+  font-family: "Cormorant SC", serif !important;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+nav .container-fluid {
+  padding: 0;
+}
+nav .container-fluid .navbar-brand {
+  color: var(--gold);
+}
+nav .container-fluid .mobile-menu {
+  color: #b4b4b4;
+}
+nav .container-fluid .profile {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  position: relative;
+}
+nav .container-fluid .profile img {
+  height: 30px;
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: white;
+}
+nav .container-fluid .profile .profile-btn {
+  cursor: pointer;
+}
+nav .container-fluid .profile .profile-btn span {
+  font-size: 0.9em;
+}
+nav .container-fluid .profile .profile-btn span:hover {
+  color: white;
+}
+nav .container-fluid .profile .profile-box {
+  position: absolute;
+  z-index: -1;
+  right: -0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  min-width: 300px;
+}
+nav .container-fluid .profile .profile-box .buttons {
+  background: url("/home/images/pattern.svg") white;
+}
+nav .container-fluid .profile .profile-box .buttons .btn {
+  background: white;
+  border-radius: unset;
+  color: black;
+}
+nav .container-fluid .profile .profile-box .buttons .btn:hover {
+  background: #666666;
+  color: white;
+}
+nav .container-fluid .profile .profile-box .glass {
+  background: rgba(255, 255, 255, 0.6);
+  min-height: 50px;
+  font-family: initial;
+}
+nav .container-fluid .profile .profile-box .glass .btn:hover {
+  background: rgba(128, 128, 128, 0.3);
+}
+nav .container-fluid .profile .show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-nav {
+  position: fixed;
+  z-index: 9999;
+  background: white;
+  height: 100%;
+  width: 85vw;
+  top: 0;
+  left: -85vw;
+  color: white;
+  text-align: left;
+  transition: left 0.4s ease-in-out;
+}
+.mobile-nav .navbar-brand {
+  color: var(--gold);
+}
+.mobile-nav .navbar-brand:hover {
+  color: var(--gold);
+}
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+.mobile-nav ul li {
+  padding: 1.2vh 1vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mobile-nav ul li a {
+  font-size: 1.3em;
+  color: #282828;
+  text-decoration: none;
+}
+
+.show-nav {
+  left: 0;
+}
+
+.cover {
+  z-index: 3;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.hero {
+  height: 100vh;
+  max-height: 937px;
+  background: url("/home/images/homep.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero .welcome {
+  margin-bottom: 15vh;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: slideInDown;
+          animation: slideInDown;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+.hero .welcome h1 {
+  line-height: 70%;
+  font-size: 2em;
+}
+.hero .welcome h2 {
+  margin: 0;
+  line-height: 70%;
+}
+.hero .book-btn {
+  width: 150px;
+  transition: 0.2s ease-in-out;
+}
+.hero .btn-top {
+  position: fixed;
+}
+.hero .btn-top .btn {
+  width: 100%;
+}
+.hero .book-form {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+.hero .book-form .box {
+  background: rgba(33, 37, 41, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 10vh;
+  max-width: 500px;
+  -webkit-animation: slideInDown;
+          animation: slideInDown;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+.hero .book-form .box .book-date input {
+  width: -webkit-fill-available;
+}
+.hero .book-form .box .book-date label {
+  color: white;
+}
+.hero .book-form .box .rooms label, .hero .book-form .box .adults label, .hero .book-form .box .children label {
+  color: white;
+}
+.hero .book-form .box .rooms .quantity, .hero .book-form .box .adults .quantity, .hero .book-form .box .children .quantity {
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 1.3em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.hero .book-form .box .rooms .quantity .input-number::-webkit-outer-spin-button,
+.hero .book-form .box .rooms .quantity .input-number::-webkit-inner-spin-button, .hero .book-form .box .adults .quantity .input-number::-webkit-outer-spin-button,
+.hero .book-form .box .adults .quantity .input-number::-webkit-inner-spin-button, .hero .book-form .box .children .quantity .input-number::-webkit-outer-spin-button,
+.hero .book-form .box .children .quantity .input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.hero .book-form .box .rooms .quantity .input-number, .hero .book-form .box .adults .quantity .input-number, .hero .book-form .box .children .quantity .input-number {
+  text-align: center;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 1.6em;
+}
+.hero .book-form .box .rooms .quantity .input-number-decrement,
+.hero .book-form .box .rooms .quantity .input-number-increment, .hero .book-form .box .adults .quantity .input-number-decrement,
+.hero .book-form .box .adults .quantity .input-number-increment, .hero .book-form .box .children .quantity .input-number-decrement,
+.hero .book-form .box .children .quantity .input-number-increment {
+  background: #f1f1f1;
+  color: #444;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.hero .book-form .box .rooms .quantity .input-number-decrement:active,
+.hero .book-form .box .rooms .quantity .input-number-increment:active, .hero .book-form .box .adults .quantity .input-number-decrement:active,
+.hero .book-form .box .adults .quantity .input-number-increment:active, .hero .book-form .box .children .quantity .input-number-decrement:active,
+.hero .book-form .box .children .quantity .input-number-increment:active {
+  background: #ddd;
+}
+.hero .book-show {
+  display: flex !important;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+}
+.hero .book-show .box {
+  background: white;
+}
+.hero .book-show .box .book-date label {
+  color: black;
+}
+.hero .book-show .box .rooms label, .hero .book-show .box .adults label, .hero .book-show .box .children label {
+  color: black;
+}
+
+.description h1 {
+  color: var(--gold);
+}
+.description p {
+  width: calc(90% - 3vw);
+  font-size: 1.1em;
+}
+
+.home-amenities {
+  background: #e9e9e9;
+  padding: 6vh 0 8vh 0;
+}
+.home-amenities .container h1 {
+  font-size: 2.8em;
+  color: var(--gold);
+  margin-bottom: 5vh;
+}
+.home-amenities .container .row img {
+  width: 5em;
+  opacity: 0.65;
+}
+.home-amenities .container .row h2 {
+  font-size: 1.1em;
+}
+@media (min-width: 960px) {
+  .home-amenities .container .row .col-lg-5 {
+    width: 20%;
+  }
+}
+.home-amenities .container .row .btn {
+  position: relative;
+  color: #6c757d;
+  background: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home-amenities .container .row .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.home-amenities .container .row .btn::after {
+  content: "↓";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  right: 20px;
+  transition: 0.1s ease-in-out;
+}
+.home-amenities .container .row .btn-rotate::after {
+  transform: rotate(180deg);
+  bottom: 6px;
+  right: 15px;
+}
+
+.location .header {
+  color: #6c757d;
+}
+.location .details {
+  background: #f6f6f6;
+  font-family: sans-serif;
+  padding: 0;
+}
+.location .details iframe {
+  width: 100%;
+  height: 300px;
+}
+.location .details h1 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0;
+  color: #5a5a5a;
+}
+.location .details p {
+  font-size: 0.9em;
+  margin: 1vh 0;
+  color: #7d6a55;
+}
+
+.rooms {
+  overflow-x: hidden;
+}
+.rooms h1 {
+  color: #bd213e;
+}
+.rooms .main img {
+  width: 100%;
+  height: 75vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rooms .room1 {
+  display: none;
+}
+
+.hotel {
+  padding-top: 5vh;
+}
+.hotel h1 {
+  color: var(--gold);
+  position: relative;
+}
+.hotel h1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 65px;
+  left: 0;
+  background: var(--gold);
+}
+.hotel .row .col-12 {
+  margin-bottom: 1vh;
+}
+.hotel .row .col-12 .collapse {
+  position: relative;
+}
+.hotel .row .col-12 .collapse .card {
+  border: none;
+  padding: 2vh 0;
+}
+.hotel .row .col-12 .collapse .card img {
+  height: 15em;
+}
+.hotel .row .col-12 .collapse .card .pool {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.hotel .row .col-12 .collapse .card p {
+  padding: 1.5vh;
+}
+.hotel .row .col-12 .collapse::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 95%;
+  left: 12px;
+  bottom: -5px;
+  background: #666666;
+}
+.hotel .row .btn {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: left;
+  width: 100%;
+  border-radius: 0;
+  background: none;
+  color: #7d6a55;
+  border: none;
+  position: relative;
+}
+.hotel .row .btn::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 95%;
+  bottom: 0;
+  background: #666666;
+}
+.hotel .row .btn::after {
+  content: "▼";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  right: 30px;
+  transition: 0.1s ease-in-out;
+}
+.hotel .row .btn-rotate::after {
+  transform: rotate(180deg);
+  top: 30px;
+  right: 15px;
+}
+.hotel .row .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+footer {
+  margin-top: 20vh;
+}
+footer .details {
+  background: #b6b6b6;
+}
+footer .details p {
+  font-size: 0.8em;
+  line-height: 1em;
+  margin: 0;
+  color: white;
+}
+footer .pages {
+  background: #282828;
+}
+footer .pages .logo h1 {
+  font-size: 1em;
+}
+footer .pages a {
+  display: block;
+  text-decoration: none;
+  color: lightgray;
+}
+footer .pages .socials h1 {
+  color: lightgray;
+}
+footer .pages .socials img {
+  margin: 5px;
+  height: 5vh;
+  border-radius: 11px;
+  cursor: pointer;
+}
+footer .credit {
+  background: black;
+}
+footer .credit h1 {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.6em;
+  color: white;
+}
+
+@media only screen and (min-width: 300px) {
+  .welcome h1 {
+    font-size: calc(2em + 3vw) !important;
+  }
+  .welcome h2 {
+    font-size: calc(1.2em + 1vw) !important;
+  }
+}
+@media only screen and (min-width: 576px) {
+  nav .container-fluid .navbar-brand, .mobile-nav .navbar-brand {
+    font-size: 2em;
+  }
+  nav .container-fluid .profile .profile-box {
+    width: auto;
+  }
+  nav .container-fluid .profile .profile-box .buttons h6 {
+    min-width: 200px;
+  }
+  .book-form {
+    max-height: 937px;
+    position: absolute !important;
+  }
+  .book-form .box {
+    border: 1px solid #666666;
+  }
+  .book-form .box .row .book-date {
+    width: 50%;
+  }
+  .book-form .box .btn {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .book-form .box .rooms, .book-form .box .adults, .book-form .box .children {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .home-amenities #collapseAmenities {
+    display: contents;
+  }
+  .home-amenities #amenities-btn {
+    display: none;
+  }
+  .location .details p {
+    font-size: 0.8em;
+  }
+  .rooms .main img {
+    content: url("/home/images/rooms/main-room.jpg");
+    height: 45vw;
+  }
+  .rooms .room1 {
+    display: inline;
+  }
+  .rooms .room1 img {
+    width: 100%;
+  }
+  .rooms button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .hotel h1::before {
+    bottom: 90px;
+  }
+  .hotel .collapse {
+    display: contents !important;
+  }
+  .hotel .collapse img {
+    margin: 0 1.5vh;
+  }
+  .hotel .collapse h2 {
+    font-weight: bold;
+    margin: 1.5vh 0 0 1.5vh;
+    color: #6c757d;
+  }
+  .hotel .collapse .col-md-5 {
+    width: 47%;
+  }
+  .hotel .collapse::after {
+    display: none;
+  }
+  .hotel button {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  nav .container-fluid .nav-item {
+    position: relative;
+    padding: 17px 0 13px 0;
+  }
+  nav .container-fluid .nav-item .nav-link {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  nav .container-fluid .nav-item::before {
+    position: absolute;
+    content: "";
+    background: var(--gold);
+    width: 80%;
+    height: 3px;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  nav .container-fluid .nav-item:hover::before, nav .container-fluid .nav-item-active::before {
+    transform: scaleX(1);
+  }
+  nav .container-fluid .profile {
+    padding: 13px 0 16px 0;
+  }
+  nav .container-fluid .profile .profile-box {
+    right: 0;
+    margin-top: 16px;
+  }
+  nav .container-fluid .profile .profile-btn::before {
+    position: absolute;
+    content: "";
+    background: var(--gold);
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    right: 0px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  nav .container-fluid .profile .profile-btn:hover::before, nav .container-fluid .profile .profile-btn-active::before {
+    transform: scaleX(1);
+  }
+  .location .details iframe {
+    height: 450px;
+  }
+  .rooms p {
+    font-size: 1.2em;
+  }
+  .rooms .main img {
+    height: 35vw;
+  }
+  .rooms .room2 {
+    height: 85vh;
+    position: relative;
+  }
+  .rooms .room2 .img1 {
+    position: absolute;
+    top: -6vh;
+    margin-right: 3vw;
+  }
+  .rooms .room2 .img1 img {
+    width: 105%;
+    height: 60vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+  }
+  .rooms .room2 .img2 {
+    position: absolute;
+    top: 7vh;
+    margin-right: 32vw;
+  }
+  .rooms .room2 .img2 img {
+    height: 70vh;
+    width: 26vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 40% 0;
+       object-position: 40% 0;
+    position: relative;
+  }
+  .rooms .room2 .shape {
+    position: absolute;
+    left: 12.3vw;
+    background: #dddddd;
+    width: 37vw;
+    height: 60vh;
+  }
+  .hotel .row .col-12 .collapse .card img {
+    height: 70vh;
+  }
+  .hotel .row .col-12 .collapse .card .col-lg-5, .hotel .row .col-12 .collapse .card .col-md-5 {
+    position: absolute;
+    background: white;
+    right: 0;
+    border: 1px solid #dee2e6;
+  }
+  .hotel .row .col-12 .collapse .card .left {
+    left: 0;
+  }
+  footer a {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home-amenities {
+    padding: 11vh 0 12vh 0;
+  }
+  .home-amenities .container h1 {
+    margin-bottom: 11vh;
+  }
+  .rooms p {
+    font-size: 1.5em;
+  }
+  .rooms button {
+    font-size: 1.2em;
+  }
+  .rooms .room2 {
+    height: 95vh;
+  }
+  .rooms .room2 .img1 img {
+    height: 70vh;
+  }
+  .rooms .room2 .img2 img {
+    height: 78vh;
+  }
+  .rooms .room2 .shape {
+    height: 70vh;
+  }
+  footer {
+    margin-top: 30vh;
+  }
+}/*# sourceMappingURL=main.css.map */

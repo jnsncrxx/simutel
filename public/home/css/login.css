@@ -1,0 +1,67 @@
+:root {
+  --gray: #6c757d;
+  --gold: #D4AF37;
+}
+
+html, body {
+  font-family: "Cormorant SC", serif !important;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+nav .container-fluid .navbar-brand {
+  color: var(--gold);
+  font-size: 2em;
+}
+
+main a {
+  text-decoration: none;
+}
+main a:hover {
+  text-decoration: underline;
+}
+main .container {
+  max-width: 550px;
+}
+main .container h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--gold);
+}
+main .container .card {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+  border: none;
+  padding: 1em calc(5px + 2vw);
+}
+main .container .card label {
+  font-weight: bold;
+}
+main .container .card input {
+  padding: 0.3em;
+  border: 1px solid lightgray;
+  font-family: initial !important;
+  border-radius: 5px;
+}
+main .container .card input:focus {
+  outline: none;
+  border: 1px solid var(--gold);
+}
+main .container .card .row .col-12 .btn {
+  border-radius: 5px;
+}
+main .container .card .row .ps-2 {
+  font-family: none;
+}
+main .container .card .row .pt-3 {
+  border-top: 1px solid gray;
+  font-family: initial !important;
+}
+main .container .card .row .pt-3 p {
+  color: #212529;
+}
+main .container .card p {
+  font-family: initial !important;
+  color: red;
+}/*# sourceMappingURL=login.css.map */

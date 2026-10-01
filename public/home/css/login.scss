@@ -1,0 +1,81 @@
+:root {
+    --gray: #6c757d;
+    --gold: #D4AF37;
+}
+
+html,body {
+    font-family: "Cormorant SC", serif !important;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+nav {
+    .container-fluid {
+        .navbar-brand {
+            color: var(--gold);
+            font-size: 2em;
+        }
+    }
+}
+main{
+    a{
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .container {
+        max-width: 550px;
+
+        h2{
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        .card {
+            box-shadow: 0 3px 10px rgb(0 0 0 / 40%);
+            border-radius: 0;
+            border: none;
+            padding: 1em calc(5px + 2vw);
+
+            label {
+                font-weight: bold;
+            }
+            input{
+                padding: .3em;
+                border: 1px solid lightgray;
+                font-family: initial !important;
+                border-radius: 5px;
+            }
+            input:focus {
+                outline: none;
+                border: 1px solid var(--gold);
+            }
+            .row {
+                .col-12 .btn {
+                    border-radius: 5px;
+                }
+                .ps-2 {
+                    font-family: none;
+                }
+                .pt-3 {
+                    border-top: 1px solid gray;
+                    font-family: initial !important;
+                    p {
+                        color: #212529;
+                    }
+                }
+            }
+            p{
+                font-family: initial !important;
+                color: red;
+            }
+        }
+    }
+}
+
+
+
+  
